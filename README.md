@@ -21,6 +21,19 @@ python3 ARL-Finger-ADD.py -u http://192.168.1.1:8888 -t 1234567890abcdefg -p ./f
 ARL 用户名密码 用法：
 python3 ARL-Finger-ADD.py -u http://192.168.1.1:8888 -a admin:arlpass -p ./finger.json
 ```
+> 提示：认证方式使用`-a`或者`-t`都可以，以下示例使用`-t`进行。
+
+### 导入[Ehole3.1](https://github.com/EdgeSecurityTeam/EHole/releases/tag/v3.1)自带的指纹文件
+
+```python
+python3 ARL-Finger-ADD.py -u http://192.168.1.1:8888 -t 1234567890abcdefg -p ./finger.json
+```
+
+### 导入[Finger](https://github.com/EASY233/Finger/blob/main/library/finger.json)指纹
+
+```python
+python3 ARL-Finger-ADD.py -u http://192.168.1.1:8888 -t 1234567890abcdefg -p ./Finger_finger.json
+```
 
 ## 版本记录
 
@@ -46,11 +59,15 @@ python3 ARL-Finger-ADD.py -u http://192.168.1.1:8888 -a admin:arlpass -p ./finge
 
 6. 优化代码逻辑（大家无需关心）
 
+### v1.1.0 2023-11-26
+
+1. 支持导入[Finger](https://github.com/EASY233/Finger/blob/main/library/finger.json)指纹，已完成
+
 ## TODO
 
 计划增加以下指纹库支持：
 
-- [ ] [Finger](https://github.com/EASY233/Finger/blob/main/library/finger.json) 截止2023年3月11日最新版，Finger有1007个
+- [x] [Finger](https://github.com/EASY233/Finger/blob/main/library/finger.json) 截止2023年3月11日最新版，Finger有1007个
 - [ ] [dismap](https://github.com/zhzyker/dismap/blob/main/readme-zh.md#-rulelab) 截止2023年11月23日最新版，Finger有4598个
 - [ ] [FingerprintHub](https://github.com/0x727/FingerprintHub/blob/main/web_fingerprint_v3.json) 截止2023年11月23日最新版，Finger有2839个(name想通的要做规则合并)
 
