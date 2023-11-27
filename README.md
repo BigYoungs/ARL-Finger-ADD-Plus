@@ -8,6 +8,8 @@
 
 1. [Ehole3.1](https://github.com/EdgeSecurityTeam/EHole/releases/tag/v3.1)自带的指纹文件
 
+2. [Finger](https://github.com/EASY233/Finger/blob/main/library/finger.json)指纹
+
 ## 用法:
 
 ```
