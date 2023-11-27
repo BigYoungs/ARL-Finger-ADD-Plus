@@ -4,7 +4,7 @@
 
 批量添加指纹`ARL(最新版)`
 
-## 支持的指纹库列表
+## 已支持导入的指纹库列表
 
 1. [Ehole3.1](https://github.com/EdgeSecurityTeam/EHole/releases/tag/v3.1)自带的指纹文件
 
