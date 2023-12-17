@@ -76,6 +76,10 @@ python3 ARL_Finger_ADD.py -u http://192.168.1.1:8888 -a admin:arlpass -f all
 
 ### v1.3.0 2023-12-17
 支持导入Dismap指纹，共计4598个
+> 提示:
+> Dismap的指纹库，需要使用此项目里的all_fingers/dismap_rule.go文件，不要使用网上下载的dismap项目rule.go文件，因为网上下载的dismap_rule.go文件，不适配此项目的代码。如果实在要换，照着我的格式改一下。
+
+
 
 ## TODO
 
