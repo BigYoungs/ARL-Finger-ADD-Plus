@@ -12,6 +12,8 @@
 
 3. [FingerprintHub](https://github.com/0x727/FingerprintHub/blob/main/web_fingerprint_v3.json) 截止2023年11月23日最新版，Finger有2839个
 
+4. dismap 截止2023年12月17日最新版，Finger有4598个
+
 
 ## 用法:
 
