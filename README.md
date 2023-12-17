@@ -81,6 +81,23 @@ python3 ARL_Finger_ADD.py -u http://192.168.1.1:8888 -a admin:arlpass -f all
 > 提示:
 > Dismap的指纹库，需要使用此项目里的all_fingers/dismap_rule.go文件，不要使用网上下载的dismap项目rule.go文件，因为网上下载的dismap_rule.go文件，不适配此项目的代码。如果实在要换，照着我的格式改一下。
 
+**重要：** 导入Dismap指纹库，需要先修改ARL的Nginx配置，否则会提示413错误，具体修改方法如下：
+```
+# 以下内容针对ARL容器部署的情况，如果是源码部署的，同理
+
+1. 进入到arl-web容器里，执行：docker exec -it arl-web /bin/bash
+
+2. vim /etc/nginx/nginx.conf
+
+3. 在http块下，添加以下内容：
+    client_max_body_size 20m;
+
+4. 重启nginx：nginx -s reload
+
+5. 退出容器：exit
+
+6. 重新运行脚本，或者直接通过ARL的web界面导入指纹库：tmp_finger.json
+```
 
 
 ## TODO
