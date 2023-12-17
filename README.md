@@ -4,7 +4,7 @@
 
 批量添加ARL指纹，支持：`ARL V2.6版本`
 
-## 已支持导入的指纹库列表
+## 已支持导入的指纹库列表，共计：9001个
 
 1. [Ehole3.1](https://github.com/EdgeSecurityTeam/EHole/releases/tag/v3.1)自带的指纹文件，Finger有1007个
 
@@ -26,7 +26,8 @@ Options:
   -a AUTH, --auth=AUTH        Please Enter Your ARL username password
   -f FINGER, --finger=FINGER  Please Enter You Want import Finger, eg:
                               1：Ehole3.1_finger.json        2：Finger_finger.json
-                              3：FingerprintHub_finger.json  all: 导入工具支持的所有指纹
+                              3：FingerprintHub_finger.json  4：Dismap_rule.go
+                              all: 导入工具支持的所有指纹
   -t TOKEN, --token=TOKEN     Please Enter Your ARL Auth Token
 
 使用示例：
@@ -73,12 +74,15 @@ python3 ARL_Finger_ADD.py -u http://192.168.1.1:8888 -a admin:arlpass -f all
 
 支持导入FingerprintHub指纹，已完成
 
+### v1.3.0 2023-12-17
+支持导入Dismap指纹，共计4598个
+
 ## TODO
 
 计划增加以下指纹库支持：
 
 - [x] [Finger](https://github.com/EASY233/Finger/blob/main/library/finger.json) 截止2023年3月11日最新版，Finger有1007个
-- [ ] [dismap](https://github.com/zhzyker/dismap/blob/main/readme-zh.md#-rulelab) 截止2023年11月23日最新版，Finger有4598个
+- [x] [dismap](https://github.com/zhzyker/dismap/blob/main/readme-zh.md#-rulelab) 截止2023年11月23日最新版，Finger有4598个
 - [x] [FingerprintHub](https://github.com/0x727/FingerprintHub/blob/main/web_fingerprint_v3.json)   截止2023年11月23日最新版，Finger有2839个
 
 ## 添加后的效果
