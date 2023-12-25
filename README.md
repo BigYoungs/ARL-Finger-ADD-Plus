@@ -35,10 +35,10 @@ Options:
 使用示例：
 
 ARL API Key 用法：
-python3 ARL_Finger_ADD.py -u http://192.168.1.1:8888 -t 1234567890abcdefg -f all
+python3 ARL_Finger_ADD_Plus.py -u http://192.168.1.1:8888 -t 1234567890abcdefg -f all
 
 ARL 用户名密码 用法：
-python3 ARL_Finger_ADD.py -u http://192.168.1.1:8888 -a admin:arlpass -f all
+python3 ARL_Finger_ADD_Plus.py -u http://192.168.1.1:8888 -a admin:arlpass -f all
 
 ```
 
@@ -80,6 +80,11 @@ python3 ARL_Finger_ADD.py -u http://192.168.1.1:8888 -a admin:arlpass -f all
 支持导入Dismap指纹，共计4598个
 > 提示:
 > Dismap的指纹库，需要使用此项目里的all_fingers/dismap_rule.go文件，不要使用网上下载的dismap项目rule.go文件，因为网上下载的dismap_rule.go文件，不适配此项目的代码。如果实在要换，照着我的格式改一下。
+
+### V1.3.1 2023-12-25
+
+修复使用-a admin:arlpass 认证模式时，报401：未登录的报错
+
 
 **重要：** 导入Dismap指纹库，需要先修改ARL的Nginx配置，否则会提示413错误，具体修改方法如下：
 ```
