@@ -2,7 +2,13 @@
 
 ## 主要功能
 
-批量添加ARL指纹，支持：`ARL V2.6版本`
+批量添加ARL指纹，支持：`ARL V2.6及以前版本`。
+
+ARL最近更新了V2.6.1版本，重大变更：更新指纹检测规则。
+
+**如你使用的ARL V2.6.1版本以后的新版本，请移步新版本导入工具：[ARL-Finger-ADD-Pro](https://github.com/BigYoungs/ARL-Finger-ADD-Pro)**
+
+> 提示：ARL-Finger-ADD-Pro和ARL-Finger-ADD-Plus，两个工具不通用，请根据自己使用版本，谨慎选择使用工具。
 
 ## 已支持导入的指纹库列表，共计：9001个
 
