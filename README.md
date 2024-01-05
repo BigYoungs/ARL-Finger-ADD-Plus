@@ -135,4 +135,4 @@ ARL-Finger-ADD-Plus 仅供学习交流使用，禁止用于非法用途，否则
 
 ## 下载地址&获取最新版
 
-[https://afdian.net/item/23525e1cabc411eeae2252540025c377](https://afdian.net/item/23525e1cabc411eeae2252540025c377)
+[https://afdian.net/a/bigyoung?tab=shop](https://afdian.net/a/bigyoung?tab=shop)
