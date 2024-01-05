@@ -135,9 +135,5 @@ ARL-Finger-ADD-Plus 仅供学习交流使用，禁止用于非法用途，否则
 
 ## 下载地址&获取最新版
 
-**国内用户点这个链接：**
-[https://note.mowen.cn/note-intro/?noteUuid=IjNpNRwhWKePx8EpbLe6h](https://note.mowen.cn/note-intro/?noteUuid=IjNpNRwhWKePx8EpbLe6h)
-
-**Overseas users click me:**
-[https://ko-fi.com/s/c6ecfba789](https://ko-fi.com/s/c6ecfba789)
+[https://mbd.pub/o/bread/mbd-ZZmWl5xv](https://mbd.pub/o/bread/mbd-ZZmWl5xv)
 
