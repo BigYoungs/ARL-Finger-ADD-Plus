@@ -4,7 +4,7 @@
 
 批量添加ARL指纹，支持：`ARL V2.6及以前版本`。
 
-ARL最近更新了V2.6.1版本，重大变更：更新指纹检测规则。
+ARL最近更新了V2.6.1版本，重大变更：更新指纹检测规则，大幅提升指纹识别准确率。
 
 **如你使用的ARL V2.6.1版本以后的新版本，请移步新版本导入工具：[ARL-Finger-ADD-Pro](https://github.com/BigYoungs/ARL-Finger-ADD-Pro)**
 
@@ -41,11 +41,32 @@ Options:
 使用示例：
 
 ARL API Key 用法：
-python3 ARL_Finger_ADD_Plus.py -u http://192.168.1.1:8888 -t 1234567890abcdefg -f all
+python3 ARL_Finger_ADD_Plus.py -u https://192.168.1.1:8888 -t 1234567890abcdefg -f all
 
 ARL 用户名密码 用法：
-python3 ARL_Finger_ADD_Plus.py -u http://192.168.1.1:8888 -a admin:arlpass -f all
+python3 ARL_Finger_ADD_Plus.py -u https://192.168.1.1:8888 -a admin:arlpass -f all
 
+```
+
+**重要提示：** 
+
+导入Dismap指纹库，需要先修改ARL的Nginx配置，否则会提示413错误，具体修改方法如下：
+
+```
+# 以下内容针对ARL容器部署的情况，如果是源码部署的，同理
+
+1. 进入到arl-web容器里，执行：docker exec -it arl-web /bin/bash
+
+2. vim /etc/nginx/nginx.conf
+
+3. 在http块下，添加以下内容：
+    client_max_body_size 20m;
+
+4. 重启nginx：nginx -s reload
+
+5. 退出容器：exit
+
+6. 重新运行脚本，或者直接通过ARL的web界面导入指纹库：tmp_finger.json
 ```
 
 ## 版本记录
@@ -91,25 +112,8 @@ python3 ARL_Finger_ADD_Plus.py -u http://192.168.1.1:8888 -a admin:arlpass -f al
 
 修复使用-a admin:arlpass 认证模式时，报401：未登录的报错
 
-
-**重要：** 导入Dismap指纹库，需要先修改ARL的Nginx配置，否则会提示413错误，具体修改方法如下：
-```
-# 以下内容针对ARL容器部署的情况，如果是源码部署的，同理
-
-1. 进入到arl-web容器里，执行：docker exec -it arl-web /bin/bash
-
-2. vim /etc/nginx/nginx.conf
-
-3. 在http块下，添加以下内容：
-    client_max_body_size 20m;
-
-4. 重启nginx：nginx -s reload
-
-5. 退出容器：exit
-
-6. 重新运行脚本，或者直接通过ARL的web界面导入指纹库：tmp_finger.json
-```
-
+### V1.3.2 2024-02-26
+增加ARL URL地址校验，如果URL地址不是以https://开头，会默认替换为https://，解决报错：Expecting value: line 1 column 1(char 0)
 
 ## TODO
 
@@ -135,4 +139,4 @@ ARL-Finger-ADD-Plus 仅供学习交流使用，禁止用于非法用途，否则
 
 ## 下载地址&获取最新版
 
-[https://afdian.net/a/bigyoung?tab=shop](https://afdian.net/a/bigyoung?tab=shop)
+[https://afdian.net/a/bigyoung?tab=shop](https://afdian.net/a/bigyoung?tab=shop) 页面搜“ARL-Finger-ADD-Plus”
